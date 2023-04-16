@@ -1,0 +1,42 @@
+1.2继承的概念
+继承:用来进行共性的提取,实现代码的复用
+Dog和Cat都继承了Animal类,其中:Animal类称为父类/基类或者超类,Dog和Cat可以称为Animal的子类/派生类
+继承之后,子类可以复用父类中成员,子类在实现时只需关心自己新增加的成员即可
+从继承概念中可以看出继承最大的作用就是:实现代码的复用,还用就是来实现多态
+1.3继承的语法
+在java中如果要表示类之间的继承关系,需要借助extends关键字,具体如下:
+  修饰符class 子类 extends 父类 {
+  //...
+ }
+对1.2中场景使用继承方式重写设计:
+  //Animal.Java
+ public class Animal{
+   String name;
+    int age;
+  public void eat() {
+  System.out.println(name+"正在吃饭");
+ }
+ public void sleep() {
+   System.out.println(name+"正在睡觉");
+  }
+}
+//Dog.java
+public class Dog extends Animal {
+   void bark(){
+  System.out.println(name+"汪汪汪~~~");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
